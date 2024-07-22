@@ -1,0 +1,211 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: url("https://wallpapers.com/blog/wp-content/uploads/2023/06/glitter-golden-bokeh-lights-scaled.jpeg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.header{  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #ebd835;                        
+    display: flex;
+    gap: 40px;
+    font-size: 20px;
+    padding: 20px 40px;
+    border: 2px;
+    background: #000;
+    align-items: center;
+}
+
+.nav{
+    color: #ebd835;    
+    display: flex;
+    gap: 40px;
+}
+
+a{
+    color: #ebd835;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#logo{                          
+    flex-grow: 1;
+}
+
+a:hover{
+    color: #a19c9c;
+}
+
+.Overview{
+    display: flex;
+    margin: 5rem 5rem 5rem 5rem;
+    padding: 50px 0 50px 0 ;
+    align-items: center;
+}
+
+#overview{
+    flex-grow: 1;
+    font-size: 2rem;
+}
+
+.slider {
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    position: relative; 
+}
+
+.slides {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.slide {
+    position: absolute;
+    opacity: 0;
+    inset: 0;
+    animation: slider-show 30s infinite; 
+}
+
+.slide1 {
+    animation-delay: 0s; 
+}
+
+.slide2 {
+    animation-delay: 6s; 
+}
+
+.slide3 {
+    animation-delay: 12s; 
+}
+
+.slide4 {
+    animation-delay: 18s;
+}
+
+.slide5 {
+    animation-delay: 24s; 
+}
+
+.slide6 {
+    animation-delay: 30s; 
+}
+
+@keyframes slider-show {
+    0%, 16.66% {
+        opacity: 0;
+    }
+    16.66%, 33.33% {
+        opacity: 1;
+    }
+    33.33%, 100% {
+        opacity: 0;
+    }
+}
+
+img{
+    border-radius: 20rem;
+}
+ 
+.menu-food{
+    display: flex;
+    gap: 1rem;
+}
+
+.menu-food{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.menu-food div{
+    width: 100%;
+    display: none;
+}
+
+div.displayslide{
+    display: block;
+}
+
+.rev{
+    display: flex;
+    gap: 1rem;
+}
+
+.rev{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.rev div{
+    width: 100%;
+    display: none;
+}
+
+div.displayslide2{
+    display: block;
+}
+
+.Dish{
+    border: #000 solid 2px;
+}
+
+.person{
+    border: #000 solid 2px;
+    padding: 2rem;
+    background: #000;
+    color: white;
+}
+
+.sign-up-form-input{               
+    width: 500px;
+    height: 30px;
+    padding: 0 5px;
+    margin: 5px 0 15px 0;
+}
+
+.sign-up-form{                      
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+input[type="submit"]{           
+    width: 100px;
+    height: 30px;
+    margin: 15px 0 0 0;
+    background: #000;
+    color: white;
+    border: white;
+    border-radius: 5px;
+}
+
+.sign-up-form{
+    margin: 5rem 5rem 5rem 5rem;
+}
+
+.lab{
+    font-size: 3rem;
+}
+.footer{
+    margin: 5rem 5rem 5rem 5rem;
+}
+.menu{
+    margin: 5rem 2rem 5rem 2rem;
+}
+.review{
+    margin: 5rem 5rem 5rem 5rem;
+}
