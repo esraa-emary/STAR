@@ -4,12 +4,31 @@
     box-sizing: border-box;
 }
 
-body{
-    background: url("https://wallpapers.com/blog/wp-content/uploads/2023/06/glitter-golden-bokeh-lights-scaled.jpeg") no-repeat center center fixed;
-    background-size: cover;
+::-webkit-scrollbar {
+    width: 12px; 
 }
 
+::-webkit-scrollbar-track {
+    background: #000; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ebd835,#000,#ebd835,#000,#ebd835);
+    border-radius: 6px; 
+}
+
+body{
+    background: #000;
+}
+
+p,h1{
+    color: #ebd835;
+}
+
+/* =========================================== header =========================================== */
+
 .header{  
+    z-index: 100;
     position: fixed;
     top: 0;
     left: 0;
@@ -20,47 +39,101 @@ body{
     font-size: 20px;
     padding: 20px 40px;
     border: 2px;
-    background: #000;
+    background: linear-gradient(to bottom,#000,#000,#000,#000,#000,#000,#000,#ebd835);
     align-items: center;
+}
+
+.bord{
+    width: 10px;
+    height: 10px;
 }
 
 .nav{
     color: #ebd835;    
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 
 a{
     color: #ebd835;
-    font-size: 20px;
+    font-size: 1rem;
     text-decoration: none;
 }
 
 #logo{                          
-    flex-grow: 1;
+    flex-grow: 1 ;
+    font-size: 1.5rem;
 }
 
 a:hover{
-    color: #a19c9c;
+    color: gray;
+    transition: all 0.2s;
+    transform: scale(1.1);
 }
 
-.Overview{
+.navbar {
     display: flex;
-    margin: 5rem 5rem 5rem 5rem;
-    padding: 50px 0 50px 0 ;
+    justify-content: space-between;
     align-items: center;
 }
 
+.navbar__links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.navbar__links a {
+    text-decoration: none;
+}
+
+.navbar__toggle svg {
+    fill: #ebd835; 
+    width: 20px;
+    height: 20px;
+}
+
+.navbar__toggle:hover svg {
+    fill: #ebd835; 
+}
+
+.navbar__toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0 20px 15px 0;
+    width: 0px;
+    height: 0px;
+} 
+
+/* =========================================== hero =========================================== */
+
+.Overview{
+    display: flex;
+    padding: 10rem 0 5rem 0 ;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.lab{
+    font-size: 2.5rem;
+    margin: 0 0 2rem 0;
+}
+
 #overview{
-    flex-grow: 1;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .slider {
-    height: 500px;
-    width: 500px;
+    height: 320px;
+    width: 320px;
     overflow: hidden;
     position: relative; 
+    border-radius: 50rem;
 }
 
 .slides {
@@ -112,49 +185,43 @@ a:hover{
     }
 }
 
+.slider:hover{
+    box-shadow: 0 0 5rem #fff;
+}
+
+/* =========================================== menu =========================================== */
+
 img{
     border-radius: 20rem;
 }
  
 .menu-food{
     display: flex;
-    gap: 1rem;
-}
-
-.menu-food{
     position: relative;
-    width: 70%;
     margin: auto;
     overflow: hidden;
+    gap: 1.9rem;
+}
+
+.menu img{
+    width: 300px;
+    height: 300px;
 }
 
 .menu-food div{
-    width: 100%;
     display: none;
 }
 
-div.displayslide{
-    display: block;
+.mmenu h1,.mmenu h2{
+    margin: 2rem 0 0 0;
+    color: #ebd835;
 }
 
-.rev{
-    display: flex;
-    gap: 1rem;
+.menu-food h1{
+    font-size: 1.5rem;    
 }
 
-.rev{
-    position: relative;
-    width: 70%;
-    margin: auto;
-    overflow: hidden;
-}
-
-.rev div{
-    width: 100%;
-    display: none;
-}
-
-div.displayslide2{
+div.displayslide,div.displayslide2{
     display: block;
 }
 
@@ -162,18 +229,60 @@ div.displayslide2{
     border: #000 solid 2px;
 }
 
-.person{
-    border: #000 solid 2px;
-    padding: 2rem;
-    background: #000;
-    color: white;
+.mmenu{
+    padding: 0 2rem  ;
+    display: flex;
+    align-items: center;
 }
 
-.sign-up-form-input{               
+/* =========================================== review =========================================== */
+
+.review{
+    margin: 5rem 2rem;
+}
+
+.rev{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+    justify-content: center;
+}
+
+.rev div{
+    display: none;
+}
+
+div.displayslide2{
+    display: block;
+}
+
+.person{
+    border: #ebd835 solid 2px; 
+    padding: 2rem 1rem;
+    background: #000;
+    width: 450px;
+    height: 300px;
+}
+
+.person img{
+    width: 300px;
+}
+
+.person h1{
+    margin: 0 0 2rem 0;
+}
+
+/* =========================================== book =========================================== */
+
+.sign-up-form-input{            
     width: 500px;
     height: 30px;
     padding: 0 5px;
     margin: 5px 0 15px 0;
+    background: #000;
+    border: #ebd835 1px solid;
 }
 
 .sign-up-form{                      
@@ -187,25 +296,255 @@ input[type="submit"]{
     width: 100px;
     height: 30px;
     margin: 15px 0 0 0;
-    background: #000;
-    color: white;
-    border: white;
+    background: #ebd835;
+    border: #ebd835;
+    color: #000;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,footer img:hover{
+    box-shadow: 0 0 5rem #fff;
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+
+.sign-up-form-input:hover{
+    box-shadow: 0 0 5rem #fff;
+    transition: all 0.2s;
 }
 
 .sign-up-form{
-    margin: 5rem 5rem 5rem 5rem;
+    margin: 5rem;
 }
 
-.lab{
-    font-size: 3rem;
+.ff{
+    display: flex;
+    flex-direction: column;
+    color: #ebd835;
 }
-.footer{
-    margin: 5rem 5rem 5rem 5rem;
+
+/* =========================================== footer =========================================== */
+
+footer{
+    margin: 5rem 0;
 }
-.menu{
-    margin: 5rem 2rem 5rem 2rem;
+
+/* =========================================================================================== */
+
+@media screen and (max-width : 1024px) {
+    .slider ,.slides img{
+        height: 300px;
+        width: 300px;
+    }
+
+    #overview,.person p{
+        font-size: 1.1rem;
+    }
+
+    .mmenu h1{
+        margin: 2rem 0 0 0;
+    }
+    
+    .menu-food h1,.menu-food h2{
+        font-size: 1.5rem;    
+    }
+
+    .nav a{
+        font-size: 0.8rem;
+    }
+
+    #logo{
+        font-size: 1.2rem;
+    }
+
+    .menu img{
+        width: 220px;
+        height: 220px;
+    }
 }
-.review{
-    margin: 5rem 5rem 5rem 5rem;
+
+@media screen and (max-width : 768px) {
+    #logo{
+        font-size: 1.2rem;
+    }
+
+    .nav {
+        display: none;
+    }
+    
+    .navbar__toggle {
+        display: block;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    .navbar {
+        display: none;
+        width: 50px;
+        background: linear-gradient(to left,#000,#000,#000,#000,#000,#000,#000,#000,#ebd835);
+    }
+
+    .Home{
+        position: relative;
+    }
+    
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top:62px;
+        right: 0;
+        height: 95vh;
+        width: 70px;
+    }
+
+    .navbar__links a {
+        font-size: 10px;
+        text-decoration: none;
+        padding: 5px;
+    }
+
+    .slider,.slides img {
+        height: 250px;
+        width: 250px;
+    }
+
+    #overview,.person p{
+        font-size: 1rem;
+    }
+
+    .lab{
+        font-size: 2rem;
+    }
+
+    .navbar__links{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu img{
+        width: 190px;
+        height: 190px;
+    }
+
+    .person img{
+        width: 250px;
+    }
+}
+
+@media screen and (max-width : 700px) {
+    .navbar.active {
+        top:62px;
+        height: 90vh;
+    }
+
+    #overview,.person p{
+        font-size: 0.6rem;
+    }
+
+    .slider,.slides img {
+        height: 200px;
+        width: 200px;
+    }
+
+    .Overview{
+        gap: 10px;
+    }
+
+    .lab{
+        font-size: 1.5rem;
+    }
+
+    .menu img{
+        width: 120px;
+        height: 120px;
+    }
+
+    .menu-food{
+        gap: 1.2rem;
+    }
+
+    .lab{
+        margin: 0 0 1rem 0;
+    }
+
+    .person img{
+        width: 120px;
+    }
+
+    .person{
+        height: 210px;
+    }
+
+    .sign-up-form-input{ 
+        width: 300px;
+    }
+}
+
+@media screen and (max-width : 425px) {
+    #overview,.person p{
+        font-size: 0.7rem;
+    }
+
+    .slider,.slides img {
+        height: 250px;
+        width: 250px;
+    }
+
+    .Overview{
+        flex-direction: column;
+        height: auto;
+        padding: 5rem 0 0 0;
+        justify-content: center;
+    }
+
+    .lab{
+        font-size: 1.5rem;
+    }
+
+    .menu{
+        margin: 5rem 0 0 0;
+    }
+
+    .menu-food h1,.menu-food h2{
+        font-size: 1.2rem;    
+    }
+
+    .menu img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .menu-food{
+        gap: 0.2rem;
+    }
+
+    .review{
+        margin: 5rem 0.5rem;
+    }
+
+    .mmenu{
+        padding: 0 0;
+    }
+
+    .person img{
+        width: 100px;
+    }
+
+    .person{
+        width: 130px;
+        height: 250px;
+    }
+
+    .person h1{
+        font-size: 1rem;
+    }
+
+    .sign-up-form-input{ 
+        width: 220px;
+    }
 }
