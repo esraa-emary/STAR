@@ -433,6 +433,10 @@ footer{
     .person img{
         width: 250px;
     }
+
+    .abc{
+        font-size: 1rem;
+    }
 }
 
 @media screen and (max-width : 700px) {
