@@ -393,7 +393,6 @@ footer{
     .navbar.active {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         position: absolute;
         top:62px;
         right: 0;
