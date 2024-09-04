@@ -5,19 +5,12 @@ document.addEventListener("DOMContentLoaded", initializeSlider);
 function initializeSlider() {
     if (slides.length > 0) {
         showSlides(slideIndex);
-        setInterval(nextslide, 5000); 
+        setInterval(nextslide, 3000); 
     }
 }
 
 function showSlides(index) {
-    if (index >= slides.length - 1) {
-        slideIndex = 0;
-    } 
-    
-    else if (index < 0) {
-        slideIndex = slides.length - 1;
-    }
-
+    slideIndex = index % slides.length;
     slides.forEach(slide => {
         slide.classList.remove("displayslide");
     });
@@ -28,13 +21,11 @@ function showSlides(index) {
     }
 }
 
-function prevslide() {
-    slideIndex --;
-    showSlides(slideIndex);
-}
-
 function nextslide() {
     slideIndex ++;
+    if (slideIndex >= slides.length) {
+        slideIndex = 0;
+    }
     showSlides(slideIndex);
 }
 
@@ -47,29 +38,20 @@ document.addEventListener("DOMContentLoaded", initializeSlider2);
 function initializeSlider2() {
     if (slides2.length > 0) {
         showSlides2(slideIndex2);
-        setInterval(nextslide2, 5000); 
+        setInterval(nextslide2, 3000); 
     }
 }
 
 function showSlides2(index) {
     slideIndex2 = index % slides2.length;
-
     slides2.forEach(slide => {
         slide.classList.remove("displayslide2");
     });
 
-    for (let i = 0; i < 4; i++) {
+    for (let i = 0; i < 2; i++) {
         const slideToShow2 = (slideIndex2 + i) % slides2.length;
         slides2[slideToShow2].classList.add("displayslide2");
     }
-}
-
-function prevslide2() {
-    slideIndex2 --;
-    if (slideIndex2 < 0) {
-        slideIndex2 = slides2.length - 1;
-    }
-    showSlides2(slideIndex2);
 }
 
 function nextslide2() {
@@ -79,3 +61,7 @@ function nextslide2() {
     }
     showSlides2(slideIndex2);
 }
+
+document.querySelector('.navbar__toggle').addEventListener('click', function() {
+    document.querySelector('.navbar').classList.toggle('active');
+});
