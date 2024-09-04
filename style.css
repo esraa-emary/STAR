@@ -383,7 +383,7 @@ footer{
     .navbar {
         display: none;
         width: 50px;
-        background: linear-gradient(to left,#000,#000,#000,#000,#000,#000,#000,#000,#ebd835);
+        background: linear-gradient(to left,#000,#000,#000,#000,#000,#000,#000,#000,#000,#000,#ebd835);
     }
 
     .Home{
@@ -394,7 +394,6 @@ footer{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         position: absolute;
         top:62px;
         right: 0;
@@ -405,7 +404,7 @@ footer{
     .navbar__links a {
         font-size: 10px;
         text-decoration: none;
-        padding: 5px;
+        padding: 10px;
     }
 
     .slider,.slides img {
