@@ -4,30 +4,23 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 ::-webkit-scrollbar {
     width: 12px; 
 }
-
 ::-webkit-scrollbar-track {
     background: #000; 
 }
-
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #ebd835,#000,#ebd835,#000,#ebd835);
     border-radius: 6px; 
 }
-
 body{
     background: #000;
 }
-
 p,h1{
     color: #ebd835;
 }
-
 /* =========================================== header =========================================== */
-
 .header{  
     z-index: 100;
     position: fixed;
@@ -43,62 +36,51 @@ p,h1{
     background: linear-gradient(to bottom,#000,#000,#000,#000,#000,#000,#000,#ebd835);
     align-items: center;
 }
-
 .bord{
     width: 10px;
     height: 10px;
 }
-
 .nav{
     color: #ebd835;    
     display: flex;
     gap: 20px;
 }
-
 a{
     color: #ebd835;
     font-size: 1rem;
     text-decoration: none;
 }
-
 #logo{                          
     flex-grow: 1 ;
     font-size: 1.5rem;
 }
-
 a:hover{
     color: gray;
     transition: all 0.2s;
     transform: scale(1.1);
 }
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .navbar__links {
     list-style: none;
     margin: 0;
     padding: 0;
     display: none;
 }
-
 .navbar__links a {
     text-decoration: none;
 }
-
 .navbar__toggle svg {
     fill: #ebd835; 
     width: 20px;
     height: 20px;
 }
-
 .navbar__toggle:hover svg {
     fill: #ebd835; 
 }
-
 .navbar__toggle {
     display: none;
     background: none;
@@ -109,9 +91,7 @@ a:hover{
     width: 0px;
     height: 0px;
 } 
-
 /* =========================================== hero =========================================== */
-
 .Overview{
     display: flex;
     padding: 10rem 0 5rem 0 ;
@@ -119,16 +99,13 @@ a:hover{
     justify-content: center;
     gap: 5rem;
 }
-
 .lab{
     font-size: 2.5rem;
     margin: 0 0 2rem 0;
 }
-
 #overview{
     font-size: 1.8rem;
 }
-
 .slider {
     height: 320px;
     width: 320px;
@@ -136,44 +113,35 @@ a:hover{
     position: relative; 
     border-radius: 50rem;
 }
-
 .slides {
     position: relative;
     height: 100%;
     width: 100%;
 }
-
 .slide {
     position: absolute;
     opacity: 0;
     inset: 0;
     animation: slider-show 30s infinite; 
 }
-
 .slide1 {
     animation-delay: 0s; 
 }
-
 .slide2 {
     animation-delay: 6s; 
 }
-
 .slide3 {
     animation-delay: 12s; 
 }
-
 .slide4 {
     animation-delay: 18s;
 }
-
 .slide5 {
     animation-delay: 24s; 
 }
-
 .slide6 {
     animation-delay: 30s; 
 }
-
 @keyframes slider-show {
     0%, 16.66% {
         opacity: 0;
@@ -185,13 +153,10 @@ a:hover{
         opacity: 0;
     }
 }
-
 .slider:hover{
     box-shadow: 0 0 5rem #fff;
 }
-
 /* =========================================== menu =========================================== */
-
 img{
     border-radius: 20rem;
 }
@@ -203,45 +168,35 @@ img{
     overflow: hidden;
     gap: 1.9rem;
 }
-
 .menu img{
     width: 300px;
     height: 300px;
 }
-
 .menu-food div{
     display: none;
 }
-
 .mmenu h1,.mmenu h2{
     margin: 2rem 0 0 0;
     color: #ebd835;
 }
-
 .menu-food h1{
     font-size: 1.5rem;    
 }
-
 div.displayslide,div.displayslide2{
     display: block;
 }
-
 .Dish{
     border: #000 solid 2px;
 }
-
 .mmenu{
     padding: 0 2rem  ;
     display: flex;
     align-items: center;
 }
-
 /* =========================================== review =========================================== */
-
 .review{
     margin: 5rem 2rem;
 }
-
 .rev{
     display: flex;
     gap: 1rem;
@@ -250,15 +205,12 @@ div.displayslide,div.displayslide2{
     overflow: hidden;
     justify-content: center;
 }
-
 .rev div{
     display: none;
 }
-
 div.displayslide2{
     display: block;
 }
-
 .person{
     border: #ebd835 solid 2px; 
     padding: 2rem 1rem;
@@ -266,17 +218,13 @@ div.displayslide2{
     width: 450px;
     height: 300px;
 }
-
 .person img{
     width: 300px;
 }
-
 .person h1{
     margin: 0 0 2rem 0;
 }
-
 /* =========================================== book =========================================== */
-
 .sign-up-form-input{            
     width: 500px;
     height: 30px;
@@ -286,14 +234,12 @@ div.displayslide2{
     border: #ebd835 1px solid;
     color: #ebd835;
 }
-
 .sign-up-form{                      
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 } 
-
 input[type="submit"]{           
     width: 100px;
     height: 30px;
@@ -304,46 +250,36 @@ input[type="submit"]{
     border-radius: 5px;
     cursor: pointer;
 }
-
 input[type="submit"]:hover,footer img:hover{
     box-shadow: 0 0 5rem #fff;
     transform: scale(1.1);
     transition: all 0.2s;
 }
-
 .sign-up-form-input:hover{
     box-shadow: 0 0 5rem #fff;
     transition: all 0.2s;
 }
-
 .sign-up-form{
     margin: 5rem;
 }
-
 .ff{
     display: flex;
     flex-direction: column;
     color: #ebd835;
 }
-
 /* =========================================== footer =========================================== */
-
 footer{
     margin: 5rem 0;
 }
-
 /* =========================================================================================== */
-
 @media screen and (max-width : 1024px) {
     .slider ,.slides img{
         height: 300px;
         width: 300px;
     }
-
     #overview,.person p{
         font-size: 1.1rem;
     }
-
     .mmenu h1{
         margin: 2rem 0 0 0;
     }
@@ -351,26 +287,21 @@ footer{
     .menu-food h1,.menu-food h2{
         font-size: 1.5rem;    
     }
-
     .nav a{
         font-size: 0.8rem;
     }
-
     #logo{
         font-size: 1.2rem;
     }
-
     .menu img{
         width: 220px;
         height: 220px;
     }
 }
-
 @media screen and (max-width : 768px) {
     #logo{
         font-size: 1.2rem;
     }
-
     .nav {
         display: none;
     }
@@ -387,7 +318,6 @@ footer{
         width: 50px;
         background: linear-gradient(to left,#000,#000,#000,#000,#000,#000,#000,#000,#000,#000,#ebd835);
     }
-
     .Home{
         position: relative;
     }
@@ -402,41 +332,35 @@ footer{
         height: 95vh;
         width: 80px;
     }
-
     .navbar__links a {
         font-size: 10px;
         text-decoration: none;
         padding: 10px;
     }
-
     .slider,.slides img {
         height: 250px;
         width: 250px;
     }
-
     #overview,.person p{
         font-size: 1rem;
     }
-
     .lab{
         font-size: 2rem;
     }
-
     .navbar__links{
         display: flex;
         flex-direction: column;
     }
-
     .menu img{
         width: 190px;
         height: 190px;
     }
-
     .person img{
         width: 250px;
     }
 
     .abc{
+        font-size: 0.8rem;
         font-size: 0.9rem;
     }
 }
@@ -446,109 +370,85 @@ footer{
         top:62px;
         height: 90vh;
     }
-
     #overview,.person p{
         font-size: 0.6rem;
     }
-
     .slider,.slides img {
         height: 200px;
         width: 200px;
     }
-
     .Overview{
         gap: 10px;
     }
-
     .lab{
         font-size: 1.5rem;
     }
-
     .menu img{
         width: 120px;
         height: 120px;
     }
-
     .menu-food{
         gap: 1.2rem;
     }
-
     .lab{
         margin: 0 0 1rem 0;
     }
-
     .person img{
         width: 120px;
     }
-
     .person{
         height: 210px;
     }
-
     .sign-up-form-input{ 
         width: 300px;
     }
 }
-
 @media screen and (max-width : 425px) {
     #overview,.person p{
         font-size: 0.7rem;
     }
-
     .slider,.slides img {
         height: 250px;
         width: 250px;
     }
-
     .Overview{
         flex-direction: column;
         height: auto;
         padding: 5rem 0 0 0;
         justify-content: center;
     }
-
     .lab{
         font-size: 1.5rem;
     }
-
     .menu{
         margin: 5rem 0 0 0;
     }
-
     .menu-food h1,.menu-food h2{
         font-size: 1.2rem;    
     }
-
     .menu img{
         width: 100px;
         height: 100px;
     }
-
     .menu-food{
         gap: 0.2rem;
     }
-
     .review{
         margin: 5rem 0.5rem;
     }
-
     .mmenu{
         padding: 0 0;
     }
-
     .person img{
         width: 100px;
     }
-
     .person{
         width: 130px;
         height: 250px;
     }
-
     .person h1{
         font-size: 1rem;
     }
-
     .sign-up-form-input{ 
         width: 220px;
     }
