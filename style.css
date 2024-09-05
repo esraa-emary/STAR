@@ -1,7 +1,8 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -9,66 +10,123 @@
 }
 
 ::-webkit-scrollbar-track {
-    background: #000; 
+    background: #fff; 
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, #ebd835,#000,#ebd835,#000,#ebd835);
+    background: #000;
     border-radius: 6px; 
 }
 
-body{
-    background: #000;
+h1 {
+    font-size: xx-large;
 }
 
-p,h1{
-    color: #ebd835;
+h2,h3,a{
+    font-size: x-large;
 }
 
-/* =========================================== header =========================================== */
+p{
+    font-size: large;
+}
 
-.header{  
-    z-index: 100;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    color: #ebd835;                        
+/* ////////////////////////////////////// hero & header /////////////////////////////////////// */
+
+.hero{
+    background: #d3c6af;
+    padding: 0 0 5rem  0;
+    position: relative;
+    background-size: cover;
+}
+
+.pp {
     display: flex;
-    gap: 40px;
-    font-size: 20px;
-    padding: 20px 40px;
-    border: 2px;
-    background: linear-gradient(to bottom,#000,#000,#000,#000,#000,#000,#000,#ebd835);
+    gap: 0;
+}
+
+.sp1{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 0 0;
+    margin: 0  5rem 5rem 5rem  ;
+    justify-content: space-between;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    margin:  0 5px 0 10px;
+}
+  
+.search__input:focus {
+    outline: none;
+    background-color: #fff;
+}
+  
+.search__input::-webkit-input-placeholder {
+    color: gray;
+    font-size: 12px;
+}
+
+.navbar{
+    display: flex;
     align-items: center;
 }
-
-.bord{
-    width: 10px;
-    height: 10px;
+  
+.search__icon {
+    height: 1em;
+    width: 1em;
+    fill: gray;
 }
 
-.nav{
-    color: #ebd835;    
+.her{
     display: flex;
-    gap: 20px;
+    flex-direction: column;
 }
 
-a{
-    color: #ebd835;
-    font-size: 1rem;
-    text-decoration: none;
+.her1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
 }
 
-#logo{                          
-    flex-grow: 1 ;
-    font-size: 1.5rem;
+.logo1{
+    margin: 0 0 1rem 0;
+    display: flex;
+    flex-direction: column;
 }
 
-a:hover{
-    color: gray;
-    transition: all 0.2s;
-    transform: scale(1.1);
+.her img{
+    border-radius: 15rem;
+}
+
+.logo img {
+    border-radius: 30px;
+}
+
+.container {
+    overflow: hidden; 
+}
+
+.slide-in-photo {
+    position: relative;
+    left: -100%;
+    opacity: 0;
+    transition: left 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.container.in-view .slide-in-photo {
+    left: 0;
+    opacity: 1;
 }
 
 .navbar {
@@ -77,180 +135,250 @@ a:hover{
     align-items: center;
 }
 
+.navbar__logo {
+    font-size: 1.5rem;
+}
+
 .navbar__links {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: none;
+    gap: 30px;
+    display: flex;
+}
+
+.navbar__links li {
+    margin: 0 0rem;
 }
 
 .navbar__links a {
+    color: #000;
     text-decoration: none;
-}
-
-.navbar__toggle svg {
-    fill: #ebd835; 
-    width: 20px;
-    height: 20px;
-}
-
-.navbar__toggle:hover svg {
-    fill: #ebd835; 
+    padding: 0.2rem;
 }
 
 .navbar__toggle {
     display: none;
     background: none;
     border: none;
+    color: #fff;
     cursor: pointer;
     margin: 0px;
-    padding: 0 20px 15px 0;
-    width: 0px;
-    height: 0px;
+    padding: 0px;
+    width: 40px;
+    height: 60px;
 } 
 
-/* =========================================== hero =========================================== */
+input[type="text"] {
+    background-color: #fff;
+    color: gray;
+    transition: all ease-in-out .5s;
+    width: 140px;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 15px;
+    margin-right: -2.5rem;
+    border: none;
+}
 
-.Overview{
+.search__button {
+    border: none;
+    background-color: #fff;
+    margin-top: .000000000000000000001em;
+    margin-bottom: 0.000000000000000000001em;
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+    border-radius: 15px;
+}
+
+/* ////////////////////////////////////////////////// Gog Breed & slide /////////////////////////////////// */
+
+.sp2{
+    margin: 5rem;
     display: flex;
-    padding: 10rem 0 5rem 0 ;
+    flex-direction: column;
     align-items: center;
+    width: 300px;
     justify-content: center;
-    gap: 5rem;
 }
 
-.lab{
-    font-size: 2.5rem;
-    margin: 0 0 2rem 0;
+button{
+    width: 100px;
+    height: 40px;
+    border-radius: 15px;
+    border: #aa6b0d;
+    color: #fff;
+    background: #aa6b0d;
 }
 
-#overview{
-    font-size: 1.8rem;
+button:hover{
+    cursor: pointer;
+    transform:scale(1.01,1.01) ;
 }
 
-.slider {
-    height: 320px;
-    width: 320px;
-    overflow: hidden;
-    position: relative; 
-    border-radius: 50rem;
-}
-
-.slides {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
-
-.slide {
-    position: absolute;
-    opacity: 0;
-    inset: 0;
-    animation: slider-show 30s infinite; 
-}
-
-.slide1 {
-    animation-delay: 0s; 
-}
-
-.slide2 {
-    animation-delay: 6s; 
-}
-
-.slide3 {
-    animation-delay: 12s; 
-}
-
-.slide4 {
-    animation-delay: 18s;
-}
-
-.slide5 {
-    animation-delay: 24s; 
-}
-
-.slide6 {
-    animation-delay: 30s; 
-}
-
-@keyframes slider-show {
-    0%, 16.66% {
-        opacity: 0;
-    }
-    16.66%, 33.33% {
-        opacity: 1;
-    }
-    33.33%, 100% {
-        opacity: 0;
-    }
-}
-
-.slider:hover{
-    box-shadow: 0 0 5rem #fff;
-}
-
-/* =========================================== menu =========================================== */
-
-img{
-    border-radius: 20rem;
-}
- 
-.menu-food{
+.slide{
     display: flex;
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    gap: 1.9rem;
+    gap: 15px;
+    align-items: center;
+    margin: 0 5rem 5rem 5rem;
+    justify-content: center;
 }
 
-.menu img{
+.slide h3{
+    margin: 2rem 0 0 0;
+}
+
+.slide img{
+    border-radius: 15px;
+    width: 550px;
+    height: 260px;
+}
+
+.slide button,.slid button{
+    width: 30px;
+    height: 40px;
+    color: #000;
+    background: #fff;
+}
+
+.slidesss{
+    display: flex;
+    gap: 1rem;
+    position: relative;
+    margin:0 10rem;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.slidesss div{
+    display: none;
+}
+
+div.displayslide{
+    display: block;
+}
+
+/* //////////////////////////// pet product & photos ////////////////////////////////////////////// */
+
+.photos{
+    display: inline-block;
+}
+
+.photos img{
     width: 300px;
     height: 300px;
 }
 
-.menu-food div{
-    display: none;
-}
-
-.mmenu h1,.mmenu h2{
-    margin: 2rem 0 0 0;
-    color: #ebd835;
-}
-
-.menu-food h1{
-    font-size: 1.5rem;    
-}
-
-div.displayslide,div.displayslide2{
-    display: block;
-}
-
-.Dish{
-    border: #000 solid 2px;
-}
-
-.mmenu{
-    padding: 0 2rem  ;
+.sp3{
+    margin: 7rem 5rem;
     display: flex;
+    flex-direction: column;
     align-items: center;
 }
 
-/* =========================================== review =========================================== */
-
-.review{
-    margin: 5rem 2rem;
+.sp3-1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    margin: 0 0 7rem 0;
 }
 
-.rev{
+/* //////////////////////////// blog & slid & news! ////////////////////////////////////////////////// */
+
+.blog{
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+}
+
+input[type="email"] {
+    width: 150px;
+    height: 40px;
+    padding: 5px;
+    border: 1px solid #fff;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); 
+    font-size: 16px;
+    border-radius: 15px;
+    margin: 2rem 0 0 0;
+}
+
+input[type="email"]:hover,input[type="email"]:focus {
+    box-shadow: 2px 2px 12px #fff;
+    border-radius: 15px;
+    outline: none; 
+}
+
+.sp4{
+    display: flex;
+    background: #d3c6af;
+    margin: 0;
+    padding: 5rem 1rem;
+    border: #fff solid 1px;
+    border-radius: 20px; 
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.sp4-2{
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+}
+
+.sp4 img{
+    border-radius: 15rem;
+}
+
+.slid{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 0 5rem 5rem 5rem;
+}
+
+.slidecard{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 550px;
+    height: 330px;
+    min-height: fit-content;
+    background: #fff;
+    border-radius: 15px;
+    transition: 450ms;
+    border: rgb(110, 108, 108) solid 3px;
+}  
+
+.slideimge{
+    border-radius: 15px;
+    width: 545px;
+    height: 250px;
+} 
+
+.slidedetails{
+    padding: 1rem 0;
+}
+
+.slides{
     display: flex;
     gap: 1rem;
     position: relative;
     margin: auto;
     overflow: hidden;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 2rem 10rem;
 }
 
-.rev div{
+.slides div{
     display: none;
 }
 
@@ -258,297 +386,366 @@ div.displayslide2{
     display: block;
 }
 
-.person{
-    border: #ebd835 solid 2px; 
-    padding: 2rem 1rem;
-    background: #000;
-    width: 450px;
-    height: 300px;
+/* ///////////////////////////// footer1 & footer2 //////////////////////////////////////// */
+
+.footer1{
+    padding: 3rem 5rem ;
+    display: flex;
+    color: #000;
+    margin: 0 5rem  ;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.person img{
-    width: 300px;
+.foo1{
+    display: flex;
+    flex-direction: column;
 }
 
-.person h1{
+.foo1 a{
+    text-decoration: none;
+    color: #000;
+}
+
+.footer1 h2{
     margin: 0 0 2rem 0;
 }
 
-/* =========================================== book =========================================== */
-
-.sign-up-form-input{            
-    width: 500px;
-    height: 30px;
-    padding: 0 5px;
-    margin: 5px 0 15px 0;
-    background: #000;
-    border: #ebd835 1px solid;
-    color: #ebd835;
+.footer1 a,.footer1 p{
+    margin: 0 0 1rem 0;
 }
 
-.sign-up-form{                      
+.footer2{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-} 
-
-input[type="submit"]{           
-    width: 100px;
-    height: 30px;
-    margin: 15px 0 0 0;
-    background: #ebd835;
-    border: #ebd835;
-    color: #000;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
-input[type="submit"]:hover,footer img:hover{
-    box-shadow: 0 0 5rem #fff;
-    transform: scale(1.1);
-    transition: all 0.2s;
+.social{
+    margin: 1rem 0;
 }
 
-.sign-up-form-input:hover{
-    box-shadow: 0 0 5rem #fff;
-    transition: all 0.2s;
+.img1{
+    width: 200px;
+    height: 200px;
 }
 
-.sign-up-form{
-    margin: 5rem;
+/* //////////////////////////////////////// Css effects ///////////////////////////// */
+
+a:hover{
+    transition: all 0.3s;
+    color: gray;
+    transform: scale(1.1,1.1);
 }
 
-.ff{
-    display: flex;
-    flex-direction: column;
-    color: #ebd835;
+.sp1 button:hover,.sp3-1 button:hover,.sp4-2 button:hover,.footer2 img:hover{
+    transition: all 0.3s;
+    transform: scale(1.01,1.01);
+    box-shadow:  0  0 2rem  #000;
 }
 
-/* =========================================== footer =========================================== */
-
-footer{
-    margin: 5rem 0;
+.sp4 button,.sp3 button,.her button{
+    margin: 2rem 0 0 0;
 }
 
-/* =========================================================================================== */
+.photos img:hover {
+    transition: all 0.3s;
+    transform: scale(1.01,1.01);
+    box-shadow:  0  0 5rem  #000;
+}
 
-@media screen and (max-width : 1024px) {
-    .slider ,.slides img{
+/* ///////////////////////////////////////////////////////////////////////// */
+
+@media screen and (max-width : 2000px) {
+    .photos img{
+        width: 210px;
+        height: 210px;
+    }
+}
+
+@media screen and (max-width : 1440px) {
+    .slidecard{
+        width: 450px;
+        height: 400px;
+    }
+
+    .slidecard img{
+        width: 445px;
         height: 300px;
+    }
+
+    .slide img{
+        width: 450px;
+        height: 300px;
+    }
+}
+
+@media screen and ( max-width : 1024px) {
+    .photos img{
+        width: 98px;
+        height: 98px;
+    }
+
+    .ss img,.slidecard img{
+        width: 295px;
+        height: 200px;
+    }
+
+    .slidesss,.slides{
+        margin: 0 5rem;
+    }
+
+    .slidecard{
         width: 300px;
+        height: 300px;
     }
 
-    #overview,.person p{
-        font-size: 1.1rem;
+    .footer1{
+        margin: 0 2rem;
     }
 
-    .mmenu h1{
-        margin: 2rem 0 0 0;
-    }
-    
-    .menu-food h1,.menu-food h2{
-        font-size: 1.5rem;    
+    .img1{
+        width: 160px;
+        height: 160px;
     }
 
-    .nav a{
-        font-size: 0.8rem;
-    }
-
-    #logo{
-        font-size: 1.2rem;
-    }
-
-    .menu img{
-        width: 220px;
-        height: 220px;
+    a{
+        font-size: 1rem;
     }
 }
 
 @media screen and (max-width : 768px) {
-    #logo{
-        font-size: 1.2rem;
+    .her1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
     }
 
-    .nav {
+    .navbar__links {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0; 
+        height: 100vh;
+        right:  0;
+        border: #fff 5px solid;
+        background: #fff;
+    }
+    
+    .navbar__links.active {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
     }
     
     .navbar__toggle {
         display: block;
-        background: none;
-        border: none;
-        cursor: pointer;
-    }
-    
-    .navbar {
-        display: none;
-        width: 50px;
-        background: linear-gradient(to left,#000,#000,#000,#000,#000,#000,#000,#000,#000,#000,#ebd835);
-    }
-
-    .Home{
-        position: relative;
-    }
-    
-    .navbar.active {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        position: absolute;
-        top:62px;
-        right: 0;
-        height: 95vh;
-        width: 80px;
-    }
-
-    .navbar__links a {
-        font-size: 10px;
-        text-decoration: none;
-        padding: 10px;
-    }
-
-    .slider,.slides img {
-        height: 250px;
-        width: 250px;
-    }
-
-    #overview,.person p{
-        font-size: 1rem;
-    }
-
-    .lab{
-        font-size: 2rem;
-    }
-
-    .navbar__links{
-        display: flex;
-        flex-direction: column;
-    }
-
-    .menu img{
-        width: 190px;
-        height: 190px;
-    }
-
-    .person img{
-        width: 250px;
-    }
-
-    .abc{
-        font-size: 0.9rem;
+        margin: 30px 50px 30px 0;
     }
 }
 
-@media screen and (max-width : 700px) {
-    .navbar.active {
-        top:62px;
-        height: 90vh;
+@media screen and (max-width : 696px) {
+    .photos img{
+        width: 63px;
+        height: 63px;
     }
 
-    #overview,.person p{
+    .sp1{
+        width: 500px;
+    }
+
+    .ss img,.slidecard img{
+        width: 225px;
+        height: 130px;
+    }
+
+    .slidecard{
+        width: 230px;
+        height: 240px;
+    }
+
+    .slid,.slide{
+        margin:5rem 0;
+    }
+
+    .sp3-1{
+        width: 500px;
+    }
+
+    .blog{
+        width: 500px;
+        margin: 5rem 0;
+    }
+
+    .sp4{
+        flex-direction: column;
+    }
+
+    .footer1 a,.footer1 p,.footer2 p{
         font-size: 0.6rem;
     }
 
-    .slider,.slides img {
-        height: 200px;
-        width: 200px;
-    }
-
-    .Overview{
-        gap: 10px;
-    }
-
-    .lab{
-        font-size: 1.5rem;
-    }
-
-    .menu img{
-        width: 120px;
-        height: 120px;
-    }
-
-    .menu-food{
-        gap: 1.2rem;
-    }
-
-    .lab{
-        margin: 0 0 1rem 0;
-    }
-
-    .person img{
-        width: 120px;
-    }
-
-    .person{
-        height: 210px;
-    }
-
-    .sign-up-form-input{ 
-        width: 300px;
+    .img1{
+        width: 100px;
+        height: 100px;
     }
 }
 
-@media screen and (max-width : 425px) {
-    #overview,.person p{
+@media screen and (max-width : 561px) {
+    .photos img{
+        width: 55px;
+        height: 55px;
+    }
+
+    p,a{
         font-size: 0.7rem;
     }
 
-    .slider,.slides img {
-        height: 250px;
-        width: 250px;
-    }
-
-    .Overview{
-        flex-direction: column;
-        height: auto;
-        padding: 5rem 0 0 0;
-        justify-content: center;
-    }
-
-    .lab{
+    h1{
         font-size: 1.5rem;
     }
 
-    .menu{
-        margin: 5rem 0 0 0;
+    h3{
+        font-size: 0.7rem;
     }
 
-    .menu-food h1,.menu-food h2{
-        font-size: 1.2rem;    
+    .footer2 p{
+        font-size: 0.7rem;
     }
 
-    .menu img{
+    .footer1 h2{
+        font-size: 1rem;
+    }
+
+    .footer1{
+        margin: 0 0;
+    }
+
+    .img1{
         width: 100px;
         height: 100px;
     }
 
-    .menu-food{
-        gap: 0.2rem;
+    .sp1{
+        width: 400px;
     }
 
-    .review{
-        margin: 5rem 0.5rem;
+    header{
+        margin: 0  0 0 1rem;
     }
 
-    .mmenu{
-        padding: 0 0;
+    .navbar{
+        margin: 0 3rem 0 0 ;
     }
 
-    .person img{
-        width: 100px;
+    .ss img,.slid img{
+        width: 164px;
+        height: 100px;
     }
 
-    .person{
-        width: 130px;
-        height: 250px;
+    .slidecard{
+        width: 170px;
+        height: 170px;
     }
 
-    .person h1{
-        font-size: 1rem;
+    .sp3-1{
+        width: 400px;
     }
 
-    .sign-up-form-input{ 
-        width: 220px;
+    .slides,.slidesss{
+        margin: 0 2rem;
+    }
+
+    .blog{
+        width: 400px;
+    }
+
+    .rr{
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width : 425px) {
+    .photos img{
+        width: 70px;
+        height: 70px;
+    }
+
+    .sp1{
+        width: 320px;
+    }
+
+    .sp3-1{
+        width: 320px;
+    }
+
+    .blog{
+        width: 350px;
+    }
+
+    .sp4-2{
+        width: 320px;
+    }
+
+    .footer1 p{
+        font-size: 0.6rem;
+    }
+
+    .footer1{
+        padding: 3rem 2rem 1rem 2rem;
+    }
+
+    .rr{
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width : 392px) {
+    .photos img{
+        width: 60px;
+        height: 60px;
+    }
+
+    .ss img,.slid img{
+        width: 162px;
+    }
+
+    .sp1{
+        width: 300px;
+    }
+
+    .sp3-1{
+        width: 300px;
+    }
+
+    .blog{
+        width: 300px;
+    }
+
+    .sp2{
+        width: 300px;
+        margin: 5rem 0;
+    }
+
+    header{
+        margin: 0 1rem;
+    }
+
+    .footer1{
+        padding: 3rem 0.5rem 2rem 0.5rem;
+    }
+
+    .navbar{
+        margin: 0  0 0 0 ;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width : 348px) {
+    .photos img{
+        width: 50px;
+        height: 50px;
     }
 }
