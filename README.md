@@ -1,2 +1,2 @@
 # STAR
-### This project represent a STAR page with HTML,CSS and JAVA SCRIPT.
+### This project represent a website STAR with HTML,CSS and JAVA SCRIPT.
